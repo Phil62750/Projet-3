@@ -1,0 +1,305 @@
+/* LOADER */
+.loader{
+    position:fixed;
+    inset:0;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    background: rgba(0,0,0,0.3);
+    animation:  fadeout 0.5s 3s linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  
+  .loader:after{
+    content:'';
+    width:100px;
+    height: 100px;
+    background: transparent;
+    transform: rotate(0);
+    animation: rotate infinite 3s linear ;
+    border-radius:50%;
+    border:10px solid green;
+    border-color:  #99E2D0 #9356dc #FF79DA ;
+  }
+ 
+  @keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+  }
+  
+  @keyframes fadeout {
+    from {opacity:1;}
+    to {opacity:0;visibility:hidden;}
+  }
+/* MAIN PAGE */
+*{
+    font-family:Roboto,Arial;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
+    margin: 0px;
+    padding: 10px;
+}
+#Logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    height: auto;
+}
+.alignlogo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+#Logo2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    height: auto;
+    
+}
+#Navlist{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    background-color: #fafafa;
+}
+.Menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+}
+h1{
+    width: 80%;
+    padding-left: 10px;
+}
+.Menu p{
+    justify-content: center;
+    width: 90%;
+    font-size: 15px;
+}
+#Button{
+    background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
+    border: none;
+    border-radius: 32px;
+    width: 80%;
+    height: 60px;
+    font-size: 23px;
+    transition: 0.2s ease-in-out;
+    font-size: 20px;
+    color: #f6f6f6;
+}
+#Button:hover{
+    transform: scale(1.05);
+    transition-duration: 500ms;
+}
+.fa-heart {
+    color: #f8f8f8;
+    background-color: white;
+    border-radius: 50%;
+    padding:.2em;
+}
+.fa-heart::before {
+    content: "\f004";
+    font-weight: bold;
+    transition: color 1s ease-out;
+    transition-duration: 1500ms;
+}
+.fa-heart:hover::before{
+    color: #9356dc;
+    cursor: pointer;
+}
+/* .fa-heart:hover{
+    color: #9356dc;
+    background-color: #9356dc;
+    transition-duration: 0.3s ;
+} */
+.dot{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+}
+.destination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    background-color: #f3f3f3;
+    border: none;
+    border-radius: 32px;
+    width: 100%;
+    height: 48px;
+}
+.location{
+    width: 100%;
+    background-color: #f3f3f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 2px 2px;
+    border: 0px solid black;
+}
+.un{
+    border: 1px solid black;
+    border-radius: 40%;
+    background-color: #9356dc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    padding: 4px;
+}
+.bouton{
+    width: 100%;
+    height: 65px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
+    background-color: #f6f6f6;
+    gap: 5px;
+    padding-left: 10px;
+
+}
+.but{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.bouton:hover{
+    background-color: #ff79da;
+    transition-delay: .2s;
+    transition-duration: 900ms;
+    opacity: 80%;
+}
+#MainCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px ;
+}
+.CardsM{
+    width: 90%;
+    height: auto;
+    border-radius: 32px;
+    box-shadow: 0px 0px 16px #0000002e;
+}
+a{
+    text-decoration: black;
+    color: black;
+}
+.Restaurant{
+    background-color: #fafafa;
+}
+.new{
+    border: 4px solid green;
+    background-color: greenyellow;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 120px;
+    z-index: 9998;
+}
+.IMGCard{
+    width: 100%;
+    max-height: 232px;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    height: auto;
+    display: inline-block;
+    /* position: relative; */
+}
+.alignhearth{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.logoend{
+    width: 100px;
+    height: 40px;
+}
+#terms{
+    border: 1px solid grey;
+    color: white;
+    background-color: grey;
+    margin: 10px 0px 0px 0px;
+    padding-left: 15px;
+}
+.alignfork{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.alignhand{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+/* PAGE A LA FRANCAISE */
+.Backgroundimg{
+    width: 100%;
+}
+
+.aligntitre{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.cardentrée{
+    border: 1px solid black;
+    width: 100%;
+    height: 90px;
+}
+.cardplats{
+    border: 1px solid black ;
+}
+.carddesserts{
+    border: 1px solid black;
+}
+#order{
+    width: 120px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+}
+#AlignMenu{
+    border: 1px solid black;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+}
+/* MEDIA  */
+@media (min-width 768px){
+    #MainCard{
+        display:flex;
+        flex-direction: row;
+        width: 100%
+    }
+    .CardsM{
+        width: 25%;
+    }
+}
