@@ -177,30 +177,7 @@ h1{
       font-weight: 700;
     }
   }
-
-/* .fa-heart {
-    color: #f8f8f8;
-    background-color: white;
-    border-radius: 50%;
-    padding:.2em;
-    animation: back ease-in-out
-} */
-
-/* .fa-heart::before {
-    content: "\f004";
-    font-weight: bold;
-    transition: color 1s ease-out;
-    transition-duration: 1500ms;
-}
-.fa-heart:hover:;::after{
-    color: #9356dc;
-    cursor: pointer;
-}
-.fa-heart:hover{
-    color: #9356dc;
-    background-color: #9356dc;
-    transition-duration: 0.3s ;
-} */
+/* FIN ANIMATIONS COEUR */
 .dot{
     display: flex;
     align-items: center;
@@ -273,8 +250,11 @@ h1{
     background-color: rgba(147, 86, 220, 0.1);
     transition-delay: .2s;
     transition-duration: 900ms;
-    /* opacity: 75%; */
 }
+.bouton +.filtre:hover{
+    color: #9356DC;
+}
+
 #MainCard{
     height: auto;
     display: flex;
@@ -337,11 +317,15 @@ a{
     height: 40px;
 }
 #terms{
-    border: 1px solid grey;
+    border: 1px solid rgb(67, 67, 67);
     color: white;
-    background-color: grey;
+    background-color: rgb(58, 57, 57);
     padding-top: 10px;
     /* margin: 10px 0px 0px 0px; */
+}
+#terms p{
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 .alignfork{
     display: flex;
@@ -482,3 +466,20 @@ h3{
 }
 
 /* MEDIA  */
+@media screen and (min-width: 768px){
+    #Navlist{
+     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    }
+    .bouton{
+        width: 32%;
+    }
+    #Navlist h1{
+        width: 100%;
+    }
+    #MainCard{
+        display: flex;
+        flex-direction: row;
+    }
+}
