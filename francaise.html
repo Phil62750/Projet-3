@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,400;1,700&family=Shrikhand&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,400;1,700&family=Shrikhand&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/7c3486bc03.js" crossorigin="anonymous"></script>
     <title>OhMyFood</title>
 </head>
@@ -23,12 +26,13 @@
     <div class="loader"></div>
     <main>
         <img class="Backgroundimg" src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Alafrancaise">
-        <section>
+        <section id="Menuboard">
             <div id="AlignMenu">
                 <div div="aligntitre">
                     <div class="style_title sty2">
                         <h1>A la française</h1>
-                        <i class="fa-regular fa-heart"></i>
+                        <div class="hearts"><i class="far fa-heart heart-1" aria-hidden="true"></i><i
+                                class="far fa-heart heart-2" aria-hidden="true"></i></div>
                     </div>
                 </div>
                 <div class="alignentrée">
@@ -36,33 +40,38 @@
                         <h2>ENTREES</h2>
                     </div>
                     <div class="cardentrée">
-                        <h3>Tartare de poulpe acidulé</h3>
                         <div class="aligntextecard">
+                        <h3>Tartare de poulpe acidulé</h3>
+                        <div class="alignprice">
                             <p>Aux zestes d'orange</p>
                             <p>25 €</p>
-                            <div class="animespace"><i class="fa-solid fa-circle-check"></i>
-                            </div>
+                        </div>
+                        </div>
+                        <div class="animespace"><i class="fa-solid fa-circle-check circle"></i>
                         </div>
                     </div>
                     <div class="cardentrée">
+                        <div class="aligntextecard">
                         <h3>Velouté de légumes d'antan</h3>
-                        <div class="aligntextecard">
-                            <p>Carotte,panais,topinambour</p>
-                            <p>35 €</p>
-                            <div class="animespace"><i class="fa-solid fa-circle-check"></i>
-                            </div>
+                        <div class="alignprice">
+                            <p>Carotte, panais, topinambour</p>
+                            <p>35€</p>
+                        </div>
+                        </div>
+                        <div class="animespace"><i class="fa-solid fa-circle-check circle"></i>
                         </div>
                     </div>
                     <div class="cardentrée">
-                        <h3>Soupe à l'oignon</h3>
                         <div class="aligntextecard">
+                        <h3>Soupe à l'oignon</h3>
+                        <div class="alignprice">
                             <p>Revisitée</p>
                             <p>20 €</p>
-                            <div class="animespace"><i class="fa-solid fa-circle-check"></i>
-                            </div>
+                        </div>
+                        </div>
+                        <div class="animespace"><i class="fa-solid fa-circle-check circle"></i>
                         </div>
                     </div>
-                </div>
         </section>
         <section>
             <div class="alignplats">
@@ -72,7 +81,7 @@
                     <div class="aligntextecard">
                         <p>Accompagnées d'une purée de panais</p>
                         <p>40 €</p>
-                        <div class="animespace"><i class="fa-solid fa-circle-check"></i>
+                        <div class="animespace"><i class="fa-solid fa-circle-check circle"></i>
                         </div>
                     </div>
                 </div>
@@ -81,7 +90,7 @@
                     <div class="aligntextecard">
                         <p>Et parmentier de pomme de terre</p>
                         <p>35 €</p>
-                        <div class="animespace"><i class="fa-solid fa-circle-check"></i>
+                        <div class="animespace"><i class="fa-solid fa-circle-check circle"></i>
                         </div>
                     </div>
                 </div>
@@ -90,7 +99,7 @@
                     <div class="aligntextecard">
                         <p>Sur son lit de gnocchis aux légumes</p>
                         <p>44 €</p>
-                        <div class="animespace"><i class="fa-solid fa-circle-check"></i>
+                        <div class="animespace"><i class="fa-solid fa-circle-check circle"></i>
                         </div>
                     </div>
                 </div>
@@ -101,7 +110,7 @@
                         <div class="aligntextecard">
                             <p>Et purée de noisettes</p>
                             <p>18 €</p>
-                            <div class="animespace"><i class="fa-solid fa-circle-check"></i>
+                            <div class="animespace"><i class="fa-solid fa-circle-check circle"></i>
                             </div>
                         </div>
                     </div>
@@ -110,7 +119,7 @@
                         <div class="aligntextecard">
                             <p>Revisité</p>
                             <p>22 €</p>
-                            <div class="animespace"><i class="fa-solid fa-circle-check"></i>
+                            <div class="animespace"><i class="fa-solid fa-circle-check circle"></i>
                             </div>
                         </div>
                     </div>
@@ -119,7 +128,7 @@
                         <div class="aligntextecard">
                             <p>Myrtilles et pâtes d'amande</p>
                             <p>23 €</p>
-                            <div class="animespace"><i class="fa-solid fa-circle-check"></i>
+                            <div class="animespace"><i class="fa-solid fa-circle-check circle"></i>
                             </div>
                         </div>
                     </div>
@@ -132,7 +141,7 @@
     </main>
     <footer>
         <section id="terms">
-            <div class="logoend" >OhMyFood</div>
+            <div class="logoend">OhMyFood</div>
             <div id="containtend">
                 <div class="alignfork">
                     <i class="fa-solid fa-utensils"></i>
