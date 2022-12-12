@@ -275,7 +275,7 @@ a{
     border-top-left-radius: 32px;
     border-top-right-radius: 32px;
     position: relative;
-    top: -50px;
+    top: -60px;
     background-color: white;
 }
 #AlignMenu{
@@ -315,17 +315,36 @@ h2{
     width: 95%;
     min-height: 80px;
     border-radius: 22px;
-    overflow: hidden;
+
     height: auto;
     box-shadow: 0px 0px 16px #0000002e;
-    padding: 1px;
-    animation: itemAppear .7s;
-    animation-timing-function: cubic-bezier(.5,1.58,.34,.72);
+    padding: 0px;
+    /* Animation menu apparition */
+    animation: itemAppear 0.7s;
+    animation-timing-function: ease-in-out;
     animation-fill-mode: both;
+    /* FIN */
     transform: scale(0);
     max-width: 100%;
     
+    
 }
+p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* Animation menu appararition */
+@keyframes itemAppear{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+/* Fin  */
 .animespace{
     display: none;
     justify-content: center;
@@ -338,17 +357,9 @@ h2{
     border: 1px solid #99E2D0;
     background-color: #99E2D0;
     color: #f3f3f3;
-    animation:  slide 2s 3s ease-in-out;
-    
+    animation:  slide 1.5s 1.5s ease-in;
 }
-    @keyframes itemAppear{
-        0%{
-            transform: scale(0);
-        }
-        100%{
-            transform: scale(1);
-        }
-    }
+    
 
 @keyframes slide {
     0%{
@@ -357,14 +368,14 @@ h2{
     /* 25%{
         width: 17%;
     } */
-    50%{
+    /* 50%{
         width: 35%;
-    }
+    } */
     /* 75%{
         width: 17%;
     } */
     100%{
-        width: 0%;
+        width: 35%;
     }
 }
 .cardentrée:hover >.animespace{
@@ -373,13 +384,16 @@ h2{
 }
 .animespace:hover{
     display: flex;
-    transition-delay: 3s;
+    transition-delay: 1s;
 }
 .circle{
     display: flex;
     justify-content: flex-end;
     font-size: 28px;
+    animation: rotate-center 1.5s 1.5s ease-in-out both;
 }
+
+
 h3{
     width: 50%;
     margin: 0px;
@@ -396,9 +410,15 @@ h4{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     width: 100%;
     padding: 8px;
 }
+/* .aligntextecard h4{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} */
 .alignprice{
     display: flex;
     flex-direction: row;
@@ -496,15 +516,15 @@ h4{
   
   .hearts:hover > .heart-1 {
     opacity: 0;
-    font-weight: 700;
+    font-weight: 600;
     transition-delay: 2000ms;
     animation-duration: 3s;
     
   }
   
   .hearts:hover > .heart-2 {
-    -webkit-animation: fill 500ms ease-out forwards;
-            animation: fill 500ms ease-out forwards;
+    -webkit-animation: fill 600ms ease-out forwards;
+            animation: fill 600ms ease-out forwards;
             
             
             
@@ -516,7 +536,7 @@ h4{
     font-size: 1.3rem;
     display: block;
     background: -webkit-linear-gradient(238deg, black 0%, black 39%, black 85%);
-   background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: 1;
   }
@@ -525,7 +545,7 @@ h4{
     font-size: 1.3rem;
     background: -webkit-linear-gradient(238deg, #9b59dc 0%, #a77fd8 39%, #ff79da 85%);
     font-weight: 700;
-     background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: 0;
   }
@@ -565,11 +585,36 @@ h4{
 /* FIN ANIMATIONS COEUR */
 /* Animation menu  */
 /* animation du cercle check */
+
 .circle:hover{
     display: flex;
-    animation: rotate ease-in-out 2s linear ;
+}
+.animespace:hover > .circle:hover{
+    -webkit-animation: rotate-center 2.2s ease-in-out forwards;
+    animation: rotate-center 2.2s ease-in-out forwards;
 }
 
+ @-webkit-keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  
 /* MEDIA  */
 @media screen and (min-width: 768px){
     #Navlist{
@@ -578,6 +623,9 @@ h4{
     flex-wrap: wrap;
     width: 100%;
     padding-left: 9px;
+    }
+    #Button{
+        width: 20%;
     }
     .bouton{
         width: 32%;
@@ -589,17 +637,21 @@ h4{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        justify-content: space-between;
         align-items: center;
         padding: 10px;
-        gap: 10px;
-        padding: 10px;
+        gap: 20px;
     }
     .IMGCard{
-        max-height: 180px;
+        
+        max-height: 220px;
     }
     .CardsM{
+        
         width: 48%;
-        min-height: 140px;
+        max-width: 750px;
+        min-height: 180px;
+        
     }
     .Menu h1{
         align-items: center;
@@ -609,10 +661,12 @@ h4{
         flex-direction: row;
         width: 100%;
         gap: 10px;
+        justify-content: center;
     }
     .align2{
         display: flex;
         flex-direction: row;
+        justify-content: center;
         width: 100%;
         gap: 10px;
     }
