@@ -267,19 +267,21 @@ a{
 .mail a{
     color: white;
 }
+
 /* PAGE DES MENUS */
  .Backgroundimg{
     width: 100%;
+    height: 360px;
 }
-#Menuboard{
+#AlignMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     border-top-left-radius: 32px;
     border-top-right-radius: 32px;
     position: relative;
     top: -60px;
     background-color: white;
-}
-#AlignMenu{
-    border-top-left-radius: 32px;
 }
 #aligntitre{
     width: 100%;
@@ -292,8 +294,9 @@ a{
     /* border:1px solid black; */
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-around;
-    gap: 20px;
+    gap: 10px;
 }
 .sty2{
     width: 100%;
@@ -308,7 +311,70 @@ h2{
     width: 33%;
     border-bottom: 4px solid #99E2D0;
 }
-.cardentrée{
+.cardentrée {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 0px 5px 2px lightgrey;
+    width: 95%;
+    height: 75px;
+    background-color: white;
+    color: black;
+    border-radius: 22px;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.cardentrée:hover .aligntextecard {
+
+    animation: slidein-content .5s linear forwards;
+}
+
+.cardentrée:hover .animespace {
+
+    animation: slidein-check .5s linear forwards;
+}
+
+.aligntextecard {
+
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    /* background-color: lightcoral; */
+}
+
+.animespace {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 22px;
+    border-bottom-right-radius: 22px;
+    transform: translate(80px);
+    width: 0%;
+    height: 100%;
+    background-color: #99E2D0;
+    /* animation: slideout 1s linear; */
+}
+
+.title h4 {
+
+    margin: 0;
+    padding: 0;
+}
+
+
+@keyframes slidein-content {
+
+    from { width: 100%; }
+    to { width: 80%; }
+}
+
+@keyframes slidein-check {
+
+    from { transform: translate(80px, 0px); }
+    to { width: 20%; transform: translate(0px, 0px); }
+}
+/* .cardentrée{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -319,16 +385,16 @@ h2{
     height: auto;
     box-shadow: 0px 0px 16px #0000002e;
     padding: 0px;
-    /* Animation menu apparition */
+    
     animation: itemAppear 0.7s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
-    /* FIN */
+    
     transform: scale(0);
     max-width: 100%;
     
     
-}
+} */
 p{
     overflow: hidden;
     text-overflow: ellipsis;
@@ -345,7 +411,7 @@ p{
     }
 }
 /* Fin  */
-.animespace{
+/* .animespace{
     display: none;
     justify-content: center;
     align-items: center;
@@ -357,40 +423,42 @@ p{
     border: 1px solid #99E2D0;
     background-color: #99E2D0;
     color: #f3f3f3;
-    animation:  slide 1.5s 1.5s ease-in;
-}
+    animation:  slide 1.5s 1.5s linear;
+} */
     
 
-@keyframes slide {
+/* @keyframes slide {
     0%{
         width: 0%;
     }
-    /* 25%{
+    25%{
         width: 17%;
-    } */
-    /* 50%{
+    }
+    50%{
         width: 35%;
-    } */
-    /* 75%{
+    }
+    75%{
         width: 17%;
-    } */
+    }
     100%{
         width: 35%;
     }
-}
-.cardentrée:hover >.animespace{
+} */
+/* .cardentrée:hover >.animespace{
     display: flex;
     
-}
-.animespace:hover{
+} */
+/* .animespace:hover{
     display: flex;
     transition-delay: 1s;
-}
+} */
 .circle{
     display: flex;
     justify-content: flex-end;
-    font-size: 28px;
-    animation: rotate-center 1.5s 1.5s ease-in-out both;
+    font-size: 24px;
+    /* animation: rotate-center 1.5s 1.5s ease-in-out both; */
+    /* animation-iteration-count:inherit; */
+    color: white;
 }
 
 
@@ -400,21 +468,21 @@ h3{
 }
 h4{
      width: 100%;
-     margin: 0px;
+     margin: 3px;
 }
 .cardentrée p{
     font-size: 12px;
     width: 100%;
 }
-.aligntextecard{
+/* .aligntextecard{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     width: 100%;
     padding: 8px;
-}
-/* .aligntextecard h4{
+} */
+/* .aligntextecard h4 p{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -589,9 +657,9 @@ h4{
 .circle:hover{
     display: flex;
 }
-.animespace:hover > .circle:hover{
-    -webkit-animation: rotate-center 2.2s ease-in-out forwards;
-    animation: rotate-center 2.2s ease-in-out forwards;
+.cardentrée:hover  .circle{
+    -webkit-animation: rotate-center 0.7s ease-in-out ;
+    animation: rotate-center 0.7s ease-in-out ;
 }
 
  @-webkit-keyframes rotate-center {
@@ -641,6 +709,9 @@ h4{
         align-items: center;
         padding: 10px;
         gap: 20px;
+    }
+    .Backgroundimg{
+        height: 820px;
     }
     .IMGCard{
         
