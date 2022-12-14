@@ -270,17 +270,19 @@ a{
 
 /* PAGE DES MENUS */
  .Backgroundimg{
+    position:relative;
     width: 100%;
-    height: 360px;
+    height: auto;
 }
-#AlignMenu{
+#Menuboard{
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     border-top-left-radius: 32px;
     border-top-right-radius: 32px;
     position: relative;
-    top: -60px;
+    top: -25px;
     background-color: white;
 }
 #aligntitre{
@@ -298,17 +300,42 @@ a{
     justify-content: space-around;
     gap: 10px;
 }
+.alignentrée2{
+    /* border:1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+.alignentrée3{
+    /* border:1px solid black; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.style_title{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
 .sty2{
     width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: flex-start;
 }
 .sty2 h1{
    font-family:Shrikhand;
 }
 h2{
     width: 33%;
+    max-width: 10%;
     border-bottom: 4px solid #99E2D0;
 }
 .cardentrée {
@@ -587,15 +614,11 @@ h4{
     font-weight: 600;
     transition-delay: 2000ms;
     animation-duration: 3s;
-    
   }
   
   .hearts:hover > .heart-2 {
     -webkit-animation: fill 600ms ease-out forwards;
-            animation: fill 600ms ease-out forwards;
-            
-            
-            
+            animation: fill 600ms ease-out forwards; 
   }
   
   .heart-1 {
@@ -711,18 +734,16 @@ h4{
         gap: 20px;
     }
     .Backgroundimg{
-        height: 820px;
+        height: auto;
+        max-height: 590px;
     }
     .IMGCard{
-        
         max-height: 220px;
     }
     .CardsM{
-        
         width: 48%;
         max-width: 750px;
         min-height: 180px;
-        
     }
     .Menu h1{
         align-items: center;
@@ -740,5 +761,11 @@ h4{
         justify-content: center;
         width: 100%;
         gap: 10px;
+    }
+    
+    h2{
+        width: 33%;
+        max-width: 5%;
+        border-bottom: 4px solid #99E2D0;
     }
 }
