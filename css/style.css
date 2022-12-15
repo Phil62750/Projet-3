@@ -272,7 +272,7 @@ a{
  .Backgroundimg{
     position:relative;
     width: 100%;
-    height: auto;
+    height: 280px;
 }
 #Menuboard{
     height: auto;
@@ -281,6 +281,7 @@ a{
     justify-content: space-around;
     border-top-left-radius: 32px;
     border-top-right-radius: 32px;
+    background-color: #F5F5F5;
     position: relative;
     top: -25px;
     background-color: white;
@@ -298,7 +299,7 @@ a{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    gap: 10px;
+    gap: 15px;
 }
 .alignentrée2{
     /* border:1px solid black; */
@@ -306,7 +307,7 @@ a{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    gap: 10px;
+    gap: 15px;
 }
 .alignentrée3{
     /* border:1px solid black; */
@@ -314,7 +315,7 @@ a{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    gap: 10px;
+    gap: 15px;
     margin-bottom: 20px;
 }
 .style_title{
@@ -351,7 +352,12 @@ h2{
     overflow: hidden;
     cursor: pointer;
 }
-
+.cardentrée p{
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* Animation check */
 .cardentrée:hover .aligntextecard {
 
     animation: slidein-content .5s linear forwards;
@@ -360,8 +366,20 @@ h2{
 .cardentrée:hover .animespace {
 
     animation: slidein-check .5s linear forwards;
+    
+}
+@keyframes slidein-content {
+
+    from { width: 100%; }
+    to { width: 80%; }
 }
 
+@keyframes slidein-check {
+
+    from { transform: translate(80px, 0px); }
+    to { width: 20%; transform: translate(0px, 0px); }
+}
+/* Fin */
 .aligntextecard {
 
     width: 100%;
@@ -390,17 +408,7 @@ h2{
 }
 
 
-@keyframes slidein-content {
 
-    from { width: 100%; }
-    to { width: 80%; }
-}
-
-@keyframes slidein-check {
-
-    from { transform: translate(80px, 0px); }
-    to { width: 20%; transform: translate(0px, 0px); }
-}
 /* .cardentrée{
     display: flex;
     flex-direction: row;
@@ -730,12 +738,12 @@ h4{
         justify-content: center;
         justify-content: space-between;
         align-items: center;
-        padding: 10px;
+        padding: 2.5px;
         gap: 20px;
+        margin-bottom: 10px;
     }
     .Backgroundimg{
-        height: auto;
-        max-height: 590px;
+        height: 420px;
     }
     .IMGCard{
         max-height: 220px;
