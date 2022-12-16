@@ -285,6 +285,7 @@ a{
     position: relative;
     top: -25px;
     background-color: white;
+
 }
 #aligntitre{
     width: 100%;
@@ -300,6 +301,10 @@ a{
     align-items: center;
     justify-content: space-around;
     gap: 15px;
+    animation: itemAppear 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+  
 }
 .alignentrée2{
     /* border:1px solid black; */
@@ -308,6 +313,9 @@ a{
     align-items: center;
     justify-content: space-around;
     gap: 15px;
+    animation: itemAppear 1.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
 }
 .alignentrée3{
     /* border:1px solid black; */
@@ -317,6 +325,9 @@ a{
     justify-content: space-around;
     gap: 15px;
     margin-bottom: 20px;
+    animation: itemAppear 1.6s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
 }
 .style_title{
     width: 95%;
@@ -339,7 +350,7 @@ h2{
     max-width: 10%;
     border-bottom: 4px solid #99E2D0;
 }
-.cardentrée {
+.cardmenu {
     display: flex;
     justify-content: space-between;
     box-shadow: 0px 0px 5px 2px lightgrey;
@@ -352,18 +363,18 @@ h2{
     overflow: hidden;
     cursor: pointer;
 }
-.cardentrée p{
+.cardmenu p{
     white-space:nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 /* Animation check */
-.cardentrée:hover .aligntextecard {
+.cardmenu:hover .aligntextecard {
 
     animation: slidein-content .5s linear forwards;
 }
 
-.cardentrée:hover .animespace {
+.cardmenu:hover .animespace {
 
     animation: slidein-check .5s linear forwards;
     
@@ -505,7 +516,7 @@ h4{
      width: 100%;
      margin: 3px;
 }
-.cardentrée p{
+.cardmenu p{
     font-size: 12px;
     width: 100%;
 }
@@ -688,9 +699,9 @@ h4{
 .circle:hover{
     display: flex;
 }
-.cardentrée:hover  .circle{
-    -webkit-animation: rotate-center 0.7s ease-in-out ;
-    animation: rotate-center 0.7s ease-in-out ;
+.cardmenu:hover  .circle{
+    -webkit-animation: rotate-center 0.8s ease-in-out ;
+    animation: rotate-center 0.8s ease-in-out ;
 }
 
  @-webkit-keyframes rotate-center {
