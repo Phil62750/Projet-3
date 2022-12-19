@@ -24,6 +24,7 @@ body{
 .alignlogo{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     gap: 10px;
 }
@@ -176,7 +177,7 @@ h1{
     /* align-items: center; */
     gap: 20px ;
     padding-bottom: 50px;
-    padding-left: 15px;
+    padding-left: 20px;
 }
 .CardsM{
     width: 90%;
@@ -301,7 +302,7 @@ a{
     align-items: center;
     justify-content: space-around;
     gap: 15px;
-    animation: itemAppear 1s;
+    animation: itemAppear 0.7s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
   
@@ -356,6 +357,7 @@ h2{
     box-shadow: 0px 0px 5px 2px lightgrey;
     width: 95%;
     height: 75px;
+    min-height: 75px;
     background-color: white;
     color: black;
     border-radius: 22px;
@@ -367,6 +369,7 @@ h2{
     white-space:nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: 15px;
 }
 /* Animation check */
 .cardmenu:hover .aligntextecard {
@@ -516,23 +519,6 @@ h4{
      width: 100%;
      margin: 3px;
 }
-.cardmenu p{
-    font-size: 12px;
-    width: 100%;
-}
-/* .aligntextecard{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    width: 100%;
-    padding: 8px;
-} */
-/* .aligntextecard h4 p{
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-} */
 .alignprice{
     display: flex;
     flex-direction: row;
@@ -633,11 +619,13 @@ h4{
     font-weight: 600;
     transition-delay: 2000ms;
     animation-duration: 3s;
+    cursor: pointer;
   }
   
   .hearts:hover > .heart-2 {
     -webkit-animation: fill 600ms ease-out forwards;
             animation: fill 600ms ease-out forwards; 
+            cursor: pointer;
   }
   
   .heart-1 {
