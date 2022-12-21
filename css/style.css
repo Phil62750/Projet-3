@@ -3,6 +3,7 @@
     font-family:Roboto,Arial;
 }
 header{
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,7 +19,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 280px;
+    width: 220px;
     height: auto;
 }
 .alignlogo{
@@ -86,27 +87,27 @@ h1{
 }
 
 .dot{
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
     width: 48px;
     height: 48px;
 }
 .destination{
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
     color: aliceblue;
     background-color: #f3f3f3;
     border: 0px;
-    border-radius: 32px;
+    /* border-radius: 32px; */
     /* width: 100%; */
     height: 48px;
     color: #000000;
     font-weight: bold;
     
 }
-.location{
+#location{
     width: 100%;
     background-color: #f3f3f3;
     display: flex;
@@ -114,6 +115,7 @@ h1{
     justify-content: center;
     box-shadow: 2px 2px 2px 2px;
     border: 0px solid black;
+    gap: 15px;
 }
 .un{
     font-size: 12px;
@@ -337,6 +339,7 @@ a{
 h2{
     width: 33%;
     max-width: 33px;
+    font-weight: normal;
     border-bottom: 4px solid #99E2D0;
     color: #353434;
 }
@@ -353,6 +356,9 @@ h2{
     align-items: center;
     overflow: hidden;
     cursor: pointer;
+}
+.price{
+    font-weight: bold;
 }
 .cardmenu p{
     white-space:nowrap;
@@ -738,7 +744,7 @@ h4{
     }
     .CardsM{
         width: 48%;
-        max-width: 750px;
+        max-width: 650px;
         min-height: 180px;
     }
     .Menu h1{
