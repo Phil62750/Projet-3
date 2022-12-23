@@ -4,13 +4,14 @@
 }
 header{
     width: 100%;
+    height: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
-    margin: 0px;
-    padding: 10px;
+    margin: 3px;
+    padding: 0px;
 }
 body{
     gap: 10px;
@@ -22,7 +23,7 @@ body{
     width: 220px;
     height: auto;
 }
-.alignlogo{
+#alignlogo{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -56,7 +57,7 @@ body{
 h1{
     /* width: 100%; */
     padding-left: 0px;
-    margin: 18px;
+    margin: 13px;
 }
 .Menu p{
     align-items: center;
@@ -87,25 +88,17 @@ h1{
 }
 
 .dot{
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
     width: 48px;
     height: 48px;
 }
+
 .destination{
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
     color: aliceblue;
     background-color: #f3f3f3;
     border: 0px;
-    /* border-radius: 32px; */
-    /* width: 100%; */
     height: 48px;
     color: #000000;
-    font-weight: bold;
-    
+    font-weight: bold; 
 }
 #location{
     width: 100%;
@@ -188,13 +181,13 @@ a{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap:10px;
+    gap:20px;
 }
 .align2{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap:10px;
+    gap:20px;
 }
 .new{
     color: green;
@@ -286,7 +279,6 @@ a{
     gap: 10px;
 }
 .alignentrée{
-    /* border:1px solid black; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -298,7 +290,6 @@ a{
   
 }
 .alignentrée2{
-    /* border:1px solid black; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -309,7 +300,6 @@ a{
     animation-fill-mode: both;
 }
 .alignentrée3{
-    /* border:1px solid black; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -339,7 +329,7 @@ a{
 h2{
     width: 33%;
     max-width: 33px;
-    font-weight: normal;
+    font-weight: lighter;
     border-bottom: 4px solid #99E2D0;
     color: #353434;
 }
@@ -356,7 +346,9 @@ h2{
     align-items: center;
     overflow: hidden;
     cursor: pointer;
+    
 }
+
 .price{
     font-weight: bold;
 }
@@ -366,145 +358,59 @@ h2{
     text-overflow: ellipsis;
     font-size: 15px;
 }
-/* Animation check */
-.cardmenu:hover .aligntextecard {
 
-    animation: slidein-content .5s linear forwards;
-}
 
 .cardmenu:hover .animespace {
-
-    animation: slidein-check .5s linear forwards;
+    animation: slidein-check .7s  linear forwards;
     
-}
-@keyframes slidein-content {
-
-    from { width: 100%; }
-    to { width: 80%; }
-}
-
-@keyframes slidein-check {
-
-    from { transform: translate(80px, 0px); }
-    to { width: 20%; transform: translate(0px, 0px); }
 }
 /* Fin */
 .aligntextecard {
-
     width: 100%;
     height: 100%;
     padding: 15px;
-    /* background-color: lightcoral; */
+  transition:all 0.7s ease-in-out;
+  background: white;
+}
+
+/* Animation check */
+.cardmenu:hover .aligntextecard {
+       width:80%;
 }
 
 .animespace {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top-right-radius: 22px;
-    border-bottom-right-radius: 22px;
-    transform: translate(80px);
     width: 0%;
     height: 100%;
     background-color: #99E2D0;
-    /* animation: slideout 1s linear; */
+    transition:all 0.7s ease-in-out;
 }
 
-.title h4 {
+/* Animation check */
+.cardmenu:hover .animespace {
+       width:20%;
+}
 
+
+.title h4 {
     margin: 0;
     padding: 0;
 }
 
-
-
-/* .cardentrée{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 95%;
-    min-height: 80px;
-    border-radius: 22px;
-
-    height: auto;
-    box-shadow: 0px 0px 16px #0000002e;
-    padding: 0px;
-    
-    animation: itemAppear 0.7s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: both;
-    
-    transform: scale(0);
-    max-width: 100%;
-    
-    
-} */
-p{
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-/* Animation menu appararition */
-@keyframes itemAppear{
-    0%{
-        transform: scale(0);
-        opacity: 0;
-    }
-    100%{
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-/* Fin  */
-/* .animespace{
-    display: none;
-    justify-content: center;
-    align-items: center;
-    border-top-right-radius: 22px;
-    border-bottom-right-radius: 22px;
-    width: 0%;
-    max-width: 35%;
-    min-height: 100%;
-    border: 1px solid #99E2D0;
-    background-color: #99E2D0;
-    color: #f3f3f3;
-    animation:  slide 1.5s 1.5s linear;
-} */
-    
-
-/* @keyframes slide {
-    0%{
-        width: 0%;
-    }
-    25%{
-        width: 17%;
-    }
-    50%{
-        width: 35%;
-    }
-    75%{
-        width: 17%;
-    }
-    100%{
-        width: 35%;
-    }
-} */
-/* .cardentrée:hover >.animespace{
-    display: flex;
-    
-} */
-/* .animespace:hover{
-    display: flex;
-    transition-delay: 1s;
-} */
 .circle{
     display: flex;
     justify-content: flex-end;
     font-size: 24px;
-    /* animation: rotate-center 1.5s 1.5s ease-in-out both; */
-    /* animation-iteration-count:inherit; */
     color: white;
+  opacity:0;
+  transition: all 0.7s ease-in-out;
 }
 
+.cardmenu:hover .circle {
+  opacity:1;
+}
 
 h3{
     width: 50%;
@@ -715,7 +621,7 @@ h4{
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    padding-left: 9px;
+    padding-left: 5px;
     }
     #Button{
         width: 20%;
@@ -764,7 +670,10 @@ h4{
         width: 100%;
         gap: 10px;
     }
-    
+    .fa-arrow-left{
+        font-size: 25px;
+        justify-items: flex-start;
+    }
     h2{
         width: 33%;
         max-width: 5%;
