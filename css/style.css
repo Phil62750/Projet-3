@@ -104,13 +104,12 @@ h1{
     font-weight: bold;
 }
 #location{
-    width: 99%;
+    width: 100%;
     background-color: #f3f3f3;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 2px 2px 2px 2px;
-    border: 2px solid black;
     gap: 15px;
 }
 .un{
@@ -262,8 +261,11 @@ a{
     height: 280px;
 }
 .white_space{
-    width: 55px;
-    /* border: 1px solid black; */
+    width: 35px;
+    height: 48px;
+}
+.white_space2{
+    width: 58px;
     height: 48px;
 }
 #Menuboard{
@@ -318,6 +320,16 @@ a{
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
 }
+/* Animation menu appararition */
+@keyframes itemAppear{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }}
 .style_title{
     width: 95%;
     display: flex;
